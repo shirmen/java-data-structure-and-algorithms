@@ -1,4 +1,4 @@
-package data_structures;
+package com.miga.data_structures;
 
 public class DoubleLinkedList {
     private Node head;

@@ -1,4 +1,4 @@
-package data_structures;
+package com.miga.data_structures;
 
 import java.util.HashMap;
 import java.util.TreeSet;

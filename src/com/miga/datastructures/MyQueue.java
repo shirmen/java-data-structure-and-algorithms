@@ -1,53 +1,35 @@
 package com.miga.datastructures;
 
+@SuppressWarnings("unchecked")
 public class MyQueue<T> {
+
     Node front;
     Node rear;
-    
-    public boolean isEmpty() {
-        return front == null;
-    }
 
-    void enqueue(T data) {
-        if (isEmpty()) {
+    public void enqueue(T data) {
+        if (front == null) {
             rear = new Node(data);
             front = rear;
         } else {
-            rear.next = new Node(data);
-            rear = rear.next;
+            rear.setNext(new Node(data));
+            rear = rear.getNext();
         }
     }
-        
-    T dequeue() {
+
+    public T dequeue() {
         if (front != null) {
-            T data = (T)front.getData();
-            front = front.next;
+            T data = (T) front.getData();
+            front = front.getNext();
             return data;
         }
         return null; 
     }
-    
+
     public void display() {
-        if (front == null)
-            return;
-        
         Node current = front;
         while (current != null) {
-            System.out.print("[" + current.getData() + "]");
+            System.out.println(current.getData());
             current = current.getNext();
         }
-        System.out.println();
-    }
-    
-    public static void main(String args[]) {
-        MyQueue<Integer> myQueue = new MyQueue<Integer>();
-        myQueue.enqueue(1);
-        myQueue.enqueue(2);
-        myQueue.enqueue(3);
-        myQueue.enqueue(4);
-        myQueue.enqueue(5);
-        myQueue.dequeue();
-        myQueue.dequeue();
-        myQueue.display();
     }
 }

@@ -5,14 +5,12 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.miga.datastructures.MyQueue;
-
-public class MyQueueTest {
+public class QueueTest {
 
     @Test
     public void testQueue() {
-        MyQueue<Integer> queue = new MyQueue<Integer>();
-        queue.enqueue(new Integer(1));
+        Queue<Integer> queue = new Queue<Integer>();
+        queue.enqueue(1);
         assertTrue(queue.dequeue() == 1);
         assertNull(queue.dequeue());
     }

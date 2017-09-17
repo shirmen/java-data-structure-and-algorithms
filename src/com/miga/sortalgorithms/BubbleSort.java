@@ -1,4 +1,4 @@
-package com.miga.sort_algorithms;
+package com.miga.sortalgorithms;
 
 import java.util.Random;
 import java.util.Scanner;

@@ -1,11 +1,10 @@
 package com.miga.datastructures;
 
-@SuppressWarnings("unchecked")
-public class MyStack<T> {
-    Node top;
+public class Stack<T> {
+    private Node<T> top;
 
     public void push(T data) {
-        Node node = new Node(data);
+        Node<T> node = new Node<T>(data);
         node.setNext(top);
         top = node;
     }
@@ -14,7 +13,7 @@ public class MyStack<T> {
         if (top == null) {
             return null;
         } else {
-            T data = (T) top.getData();
+            T data = top.getData();
             top = top.getNext();
             return data;
         }
@@ -22,7 +21,7 @@ public class MyStack<T> {
 
     public T peek() {
         if (top != null)
-            return (T) top.getData();
+            return top.getData();
         else
             return null;
     }

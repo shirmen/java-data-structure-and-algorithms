@@ -5,14 +5,14 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.miga.datastructures.MyStack;
+import com.miga.datastructures.Stack;
 
-public class MyStackTest {
+public class StackTest {
 
     @Test
     public void testStack() {
-        MyStack<Integer> stack = new MyStack<Integer>();
-        stack.push(new Integer(1));
+        Stack<Integer> stack = new Stack<Integer>();
+        stack.push(1);
         assertTrue((int)stack.pop() == 1);
         assertNull(stack.pop());
     }

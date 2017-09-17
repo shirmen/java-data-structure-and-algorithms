@@ -1,4 +1,4 @@
-package com.miga.data_structures;
+package com.miga.datastructures;
 
 public class Queue {
     Object array[];

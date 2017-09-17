@@ -1,4 +1,4 @@
-package com.miga.data_structures;
+package com.miga.datastructures;
 
 import java.lang.Math;
 

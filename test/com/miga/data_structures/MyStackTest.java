@@ -1,11 +1,11 @@
-package test.com.miga.data_structures;
+package com.miga.data_structures;
 
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.miga.data_structures.MyStack;
+import com.miga.datastructures.MyStack;
 
 public class MyStackTest {
 

@@ -1,4 +1,4 @@
-package com.miga.data_structures;
+package com.miga.datastructures;
 
 class TreeNode {
     Object data;

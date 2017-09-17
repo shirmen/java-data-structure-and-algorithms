@@ -1,47 +1,47 @@
 package com.miga.datastructures;
 
-class Node {
+class Node<T> {
 
-    private Object data;
-    private Node next;
-    private Node prev;
+    private T data;
+    private Node<T> next;
+    private Node<T> prev;
 
-    public Node(Object data) {
+    public Node(T data) {
         this.data = data;
     }
 
-    public Node(Object data, Node next) {
+    public Node(T data, Node<T> next) {
         this.data = data;
         this.next = next;
     }
 
-    public Node(Object data, Node prev, Node next) {
+    public Node(T data, Node<T> prev, Node<T> next) {
         this.data = data;
         this.prev = prev;
         this.next = next;
     }
 
-    public void setData(Object data) {
+    public void setData(T data) {
         this.data = data;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public void setPrev(Node prev) {
+    public void setPrev(Node<T> prev) {
         this.prev = prev;
     }
 
-    public Node getPrev() {
+    public Node<T> getPrev() {
         return prev;
     }
 
-    public void setNext(Node next) {
+    public void setNext(Node<T> next) {
         this.next = next;
     }
 
-    public Node getNext() {
+    public Node<T> getNext() {
         return next;
     }
 

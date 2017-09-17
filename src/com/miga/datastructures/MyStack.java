@@ -1,27 +1,28 @@
 package com.miga.datastructures;
 
-public class MyStack<V> {
+@SuppressWarnings("unchecked")
+public class MyStack<T> {
     Node top;
 
-    public MyStack() {
-        top = null;
-    }
-
-    public void push(int data) {
+    public void push(T data) {
         Node node = new Node(data);
-        node.next = top;
+        node.setNext(top);
         top = node;
     }
-    
-    public void pop() {
-        if (top != null) {
-            top = top.next;
+
+    public T pop() {
+        if (top == null) {
+            return null;
+        } else {
+            T data = (T) top.getData();
+            top = top.getNext();
+            return data;
         }
     }
 
-    public Object peek() {
+    public T peek() {
         if (top != null)
-            return top.getData();
+            return (T) top.getData();
         else
             return null;
     }

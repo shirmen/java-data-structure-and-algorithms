@@ -1,5 +1,7 @@
 package com.miga.sortalgorithms;
 
+import com.miga.sortalgorithms.common.SortUtil;
+
 public class QuickSort {
 
     public static <T extends Comparable<T>> T[] sort(T array[], int left, int right) {
@@ -14,7 +16,7 @@ public class QuickSort {
             if (i >= j) break;
 
             if (array[i].compareTo(array[j]) != 0)
-                swap(array, i, j);
+                SortUtil.swap(array, i, j);
 
             i++;
             j--;
@@ -27,11 +29,5 @@ public class QuickSort {
             sort(array, j + 1, right);
 
         return array;
-    }
-
-    public static <T extends Comparable<T>> void swap(T array[], int i, int j) {
-        T temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
     }
 }

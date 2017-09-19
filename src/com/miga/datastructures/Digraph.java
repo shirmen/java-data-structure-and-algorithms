@@ -3,29 +3,29 @@ package com.miga.datastructures;
 import java.util.HashMap;
 import java.util.TreeSet;
 
-public class Digraph<V> {
+public class Digraph<T> {
 
-    private HashMap<V, TreeSet<V>> adjList;
+    private HashMap<T, TreeSet<T>> adjList;
 
     Digraph() {
-        adjList = new HashMap<V, TreeSet<V>>();
+        adjList = new HashMap<T, TreeSet<T>>();
     }
 
-    public void addVertex(V vertex) {
+    public void addVertex(T vertex) {
         if (adjList.containsKey(vertex))
             return;
-        adjList.put(vertex, new TreeSet<V>());
+        adjList.put(vertex, new TreeSet<T>());
     }
 
-    public void addVertex(V from, V to) {
+    public void addVertex(T from, T to) {
         addVertex(from);
         addVertex(to);
         adjList.get(from).add(to);
     }
 
     public void printBreadthFirst() {
-        for (V v: adjList.keySet()) {
-            System.out.println(v + " -> " + adjList.get(v));
+        for (T t: adjList.keySet()) {
+            System.out.println(t + " -> " + adjList.get(t));
         }
     }
 

@@ -7,8 +7,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import com.miga.datastructures.LinkedList;
-
 public class LinkedListTest {
 
     @Test

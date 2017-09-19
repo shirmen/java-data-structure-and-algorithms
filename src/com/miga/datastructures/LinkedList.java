@@ -7,10 +7,6 @@ public class LinkedList<T> {
         return head;
     }
 
-    public boolean isEmpty() {
-        return head == null;
-    }
-
     public void add(T data) {
         if (head == null) {
             head = new Node<T>(data);
@@ -70,7 +66,7 @@ public class LinkedList<T> {
     }
 
     public void swap(int left, int right) {
-        if (isEmpty() || left <= 0 || right <= 0)
+        if (head == null || left <= 0 || right <= 0)
             return;
 
         Node<T> current = head;
